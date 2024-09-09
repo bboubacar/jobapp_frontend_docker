@@ -1,7 +1,5 @@
 export const routes = {
-    // based_url: "http://offres.emplois/",
-    // based_url: "https://bcr.alwaysdata.net/",
-    based_url: "http://localhost:8080/",
+    based_url: "https://jobappapidocker-production.up.railway.app/",
     users: "users/",
     createUser: "register",
     updateUser: "update",
