@@ -1,10 +1,9 @@
-version: "3.8"
 services:
     frontend:
-        build: ./jobapp
+        build: .
         container_name: frontendtest
         ports:
             - "5173:5173"
         volumes:
-            - ./jobapp:/app
+            - .:/app
             - /app/node_modules
