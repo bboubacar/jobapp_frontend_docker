@@ -13,7 +13,13 @@ RUN npm install
 # Copiez le reste des fichiers de l'application
 COPY . .
 
+# Exécutez le build de production
+RUN npm run build
+
+# Installez un serveur HTTP pour servir les fichiers statiques
+RUN npm install -g serve
+
 # Exposez le port 5173
 EXPOSE 5173
 
-CMD ["npm", "run", "build"]
+CMD ["serve", "-s", "dist", "-l", "5173"]
